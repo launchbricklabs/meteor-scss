@@ -196,7 +196,8 @@ class SassCompiler extends MultiFileCachingCompiler {
       indentedSyntax : inputFile.getExtension() === 'sass',
       outFile: '.'+inputFile.getBasename(),
       importer: importer,
-      includePaths:      []
+      includePaths:      [],
+      precision: 10
     };
 
     options.file  =  this.getAbsoluteImportPath(inputFile);
@@ -207,7 +208,7 @@ class SassCompiler extends MultiFileCachingCompiler {
     // In that case options.file will be used by node-sass,
     // which it can not read since it will contain a meteor package or app reference '{}'
     // This is one workaround, another one would be to not set options.file, in which case the importer 'prev' will be 'stdin'
-    // However, this would result in problems if a file named stdín.scss would exist.
+    // However, this would result in problems if a file named stdÃ­n.scss would exist.
     // Not the most elegant of solutions, but it works.
     if(!options.data.trim()){
       options.data = "$fakevariable : blue;"
