@@ -29,7 +29,7 @@ If you want to use it for your package, add it in your package control file's
 ```javascript
 Package.onUse(function (api) {
   ...
-  api.use('fourseven:scss');
+  api.use('launchbricklabs:meteor-scss');
   ...
 });
 ```
