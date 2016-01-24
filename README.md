@@ -1,4 +1,5 @@
 # Sass for Meteor
+Forked from fourseven:scss
 This is a Sass build plugin for Meteor. It compiles Sass files with node-sass and it has options to control the load order of Sass files and use Autoprefixer on the generated CSS.
 
 ## Meteor 1.2
@@ -20,7 +21,7 @@ meteor add seba:minifiers-autoprefixer
 Install using Meteor's package management system:
 
 ```bash
-> meteor add fourseven:scss
+> meteor add marccantwell:meteor-scss
 ```
 
 If you want to use it for your package, add it in your package control file's
@@ -29,7 +30,7 @@ If you want to use it for your package, add it in your package control file's
 ```javascript
 Package.onUse(function (api) {
   ...
-  api.use('launchbricklabs:meteor-scss');
+  api.use('marccantwell:meteor-scss');
   ...
 });
 ```
